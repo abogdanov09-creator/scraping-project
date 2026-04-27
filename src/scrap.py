@@ -104,7 +104,7 @@ class SimpleScraper:
             print("❌ Нет данных для сохранения")
             return False
 
-        os.makedirs("../data", exist_ok=True)
+        os.makedirs("data", exist_ok=True)
 
         with open(filename, 'w', newline='', encoding='utf-8-sig') as f:
             fieldnames = ['name', 'price', 'rating', 'availability', 'category', 'timestamp']
@@ -122,7 +122,7 @@ class SimpleScraper:
             return
 
         df = pd.DataFrame(self.products)
-        os.makedirs("../data", exist_ok=True)
+        os.makedirs("data", exist_ok=True)
 
         # ===== ОТЧЕТ =====
         report_lines = []
@@ -160,7 +160,7 @@ class SimpleScraper:
         report_lines.append("=" * 60)
 
         report_text = "\n".join(report_lines)
-        with open("../data/report.txt", "w", encoding='utf-8') as f:
+        with open("data/report.txt", "w", encoding='utf-8') as f:
             f.write(report_text)
 
         print("\n" + report_text)
