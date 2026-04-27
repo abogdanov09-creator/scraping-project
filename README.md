@@ -69,3 +69,22 @@
 ```bash
 git clone https://github.com/abogdanov09-creator/scraping-project.git
 cd scraping-project
+
+### Документация
+
+| Тип | URL |
+|-----|-----|
+| Swagger UI | http://localhost:8000/docs |
+| ReDoc | http://localhost:8000/redoc |
+
+### Примеры запросов
+
+```bash
+# Статистика
+curl http://localhost:8000/stats
+
+# Топ-5 дорогих книг
+curl http://localhost:8000/products/top?limit=5
+
+# Поиск
+curl http://localhost:8000/products/search?q=Sapiens
