@@ -1,15 +1,23 @@
+
+
+```txt
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-env/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
 venv/
+env/
 ENV/
 .venv
-pip-log.txt
-pip-delete-this-directory.txt
 
 # IDE
 .vscode/
@@ -17,17 +25,13 @@ pip-delete-this-directory.txt
 *.swp
 *.swo
 *~
-.DS_Store
 
 # Project specific
-data/
-*.db
-*.sqlite
 .env
-.env.local
 *.log
+*.db
+.DS_Store
+Thumbs.db
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
+# Data (опционально — если не хотите хранить данные в репе)
+# src/data/
